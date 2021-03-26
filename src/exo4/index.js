@@ -38,16 +38,36 @@
  *    dans la div #root
  */
 
-/*
- * Import
- */
+import React from 'react';
+import { render } from 'react-dom';
 import test from './test';
 
+import HelloWorld from './HelloWorld';
 
 /*
  * Code
  */
 
+// on passe les éléménts :
+// <p>Et c'est super cool !</p>
+// <p>Vous ne trouvez pas ?</p>
+// en tant qu'enfant de HelloWorld
+// on peut ainsi les récupérer dans la définition du composant
+// pour les intégrer dans la portion d'UI qu'il représente
+render(
+  <HelloWorld lang="React" method="ReactDOM">
+    <p>Et c'est super cool !</p>
+    <p>Vous ne trouvez pas ?</p>
+  </HelloWorld>,
+  /*
+  Equivalent à :
+  HelloWorld({
+    lang: "React",
+    method: "ReactDOM",
+  }),
+  */
+  document.getElementById('root'),
+);
 
 /*
  * Tests
