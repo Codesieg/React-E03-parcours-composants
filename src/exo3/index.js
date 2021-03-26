@@ -35,13 +35,26 @@
 /*
  * Import
  */
+import React from 'react';
+import { render } from 'react-dom';
 import test from './test';
 
+import HelloWorld from './HelloWorld';
 
 /*
  * Code
  */
-
+render(
+  <HelloWorld lang="React" method="ReactDOM" />,
+  /*
+  Equivalent à :
+  HelloWorld({
+    lang: "React",
+    method: "ReactDOM",
+  }),
+  */
+  document.getElementById('root'),
+);
 
 /*
  * Tests
