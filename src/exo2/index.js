@@ -25,8 +25,11 @@
 /*
  * Npm import
  */
+import React from 'react';
+
 // on importe la fonction render 
 // depuis la bibliothèque react-dom
+
 import { render } from 'react-dom';
 
 /*
@@ -45,7 +48,7 @@ import test from './test';
 // on peut ainsi se servir de la fonction render (importée précédemment)
 // pour faire en sorte que notre composant soit rendu dans le navigateur
 render(
-  HelloWorld(), // composant à rendre
+  <HelloWorld />, // composant à rendre, en règle générale, on utilise ici la syntaxe JSX
   document.getElementById('root'), // élément du DOM dans lequel rendre le composant
 );
 
