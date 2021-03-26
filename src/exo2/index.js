@@ -25,18 +25,29 @@
 /*
  * Npm import
  */
-
+// on importe la fonction render 
+// depuis la bibliothèque react-dom
+import { render } from 'react-dom';
 
 /*
  * Local import
  */
-import test from './test';
+// on importe notre composant HelloWorld
+// défini dans le module HelloWorld
+import HelloWorld from './HelloWorld';
 
+import test from './test';
 
 /*
  * Code
  */
 
+// on peut ainsi se servir de la fonction render (importée précédemment)
+// pour faire en sorte que notre composant soit rendu dans le navigateur
+render(
+  HelloWorld(), // composant à rendre
+  document.getElementById('root'), // élément du DOM dans lequel rendre le composant
+);
 
 /*
  * Tests
