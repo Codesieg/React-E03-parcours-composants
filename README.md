@@ -15,3 +15,4 @@ Lancez `http://localhost:8080` pour accéder au premier exercice.
 * Ils sont accompagnés d'un fichier `test.js` exportant une fonction
 qui permet de tester votre code.
 
+# React-E03-parcours-composants
